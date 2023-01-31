@@ -1,5 +1,6 @@
 const input = document.querySelectorAll('.input-usuario')
 const btnLogin = document.querySelector('#btn-login')
+const form = document.querySelector('.login-form')
 
 input.forEach(i => i.addEventListener('focus', ({target}) => {
     if (target.value == '') {
@@ -23,6 +24,6 @@ input.forEach(i => i.addEventListener('input', ({target}) => {
     }
 }))
 
-btnLogin.addEventListener('click', () => {
+form.addEventListener('submit', () => {
     window.open('https://github.com/guifrangolino/tela-login-lol', '_blank')
 })
