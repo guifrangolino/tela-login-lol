@@ -22,3 +22,7 @@ input.forEach(i => i.addEventListener('input', ({target}) => {
         btnLogin.setAttribute('disabled', '')
     }
 }))
+
+btnLogin.addEventListener('click', () => {
+    window.open('https://github.com/guifrangolino/tela-login-lol', '_blank')
+})
