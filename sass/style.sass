@@ -1,0 +1,294 @@
+@use 'sass:color'
+@use '_variaveis'
+
+// RESPONSIVIDADE
+@mixin mobile-m
+    @media (max-width: 768px)
+        @content
+
+@mixin mobile-p
+    @media (max-width: 427px)
+        @content
+
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Lexend Deca', sans-serif
+
+    a
+        text-decoration: none
+
+    input
+        border: none
+        outline: none
+
+main
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 100vw
+    width: 100%
+    min-height: 100vh
+    background-color: variaveis.$login-bg 
+
+.login
+    background-color: variaveis.$login-bg
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    max-width: 400px
+
+.logo
+    max-width: 120px
+    width: 100%
+    margin: 4.5rem
+
+.login-area
+    width: 100%
+    padding: 0 3rem
+    display: flex
+    justify-content: center
+    flex-grow: 1
+
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+
+        h2
+            font-weight: 600
+            letter-spacing: -0.07rem
+            margin-bottom: .5rem
+
+        // INPUT USUARIO SENHA
+        .login-inputs
+            width: 100%
+
+            &-input
+                position: relative
+                margin-top: 1rem
+                margin-bottom: 1rem
+
+                input
+                    background-color: variaveis.$input-color
+                    width: 100%
+                    min-height: 3.1rem
+                    border-radius: .3rem
+                    padding: 0 10px
+                    padding-top: 10px 
+                    font-size: 1rem
+                    font-weight: bold
+                    transition: .3s
+                    outline: none
+
+                    &:focus
+                        outline: 3px solid variaveis.$fonte-color
+                        background-color: variaveis.$login-bg
+                        transition: none
+
+                label
+                    cursor: text
+                    text-transform: uppercase
+                    font-size: 0.7em
+                    font-weight: bold
+                    position: absolute
+                    color: variaveis.$hover-color
+                    top: 35%
+                    left: 15px
+                    transition: .2s
+
+                .ativo
+                    font-size: 0.6em
+                    top: 15%
+                    left: 10px
+
+// BOTÕES DE LOGIN ALTERNATIVOS
+
+.btn
+    cursor: pointer
+    outline: none
+    border: none
+    background: none
+    transition: .1s
+
+.login-form-opcoes
+    display: flex
+    width: 100%
+    justify-content: space-between
+    gap: .5rem
+
+    .btn 
+        background: green
+        max-width: 68px
+        width: 100%
+        padding: .5rem 0
+        border-radius: .4rem
+        margin: 1rem 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &-facebook
+            background-color: variaveis.$facebook-bg-color
+
+            &:hover
+                background-color: color.adjust(variaveis.$facebook-bg-color, $red: -25, $green: -25, $blue: -25)
+
+        &-google
+            background-color: variaveis.$google-bg-color
+
+            &:hover
+                background-color: color.adjust(variaveis.$google-bg-color, $red: -25, $green: -25, $blue: -25)
+
+        &-apple
+            background-color: variaveis.$apple-bg-color
+
+            &:hover
+                background-color: color.adjust(variaveis.$apple-bg-color, $red: 25, $green: 25, $blue: 25)
+
+        &-xbox
+            background-color:  variaveis.$xbox-bg-color
+
+            &:hover
+                background-color: color.adjust(variaveis.$xbox-bg-color, $red: -25, $green: -25, $blue: -25)
+
+        i
+            color: variaveis.$login-bg
+            font-size: 1.1rem
+
+        img
+            width: 25%
+
+// MANTER LOGIN
+.manter-login
+    align-self: flex-start
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    label
+        cursor: pointer
+
+    input 
+        cursor: pointer
+        appearance: none
+        background-color: variaveis.$input-color
+        width: 17px
+        height: 17px
+        border-radius: 3px
+        margin-right: 10px
+        position: relative
+
+        &:checked
+            background-color: variaveis.$btn-bg
+        
+        &:checked::after
+            content: ''
+            position: absolute
+            left: 5px
+            top: 3px
+            width: 3px
+            height: 7px
+            border: 3px solid variaveis.$login-bg
+            border-width: 0 3px 3px 0
+            transform: rotate(45deg)
+
+// BOTÃO DE ENTRAR
+.submit-login
+    background-color: variaveis.$btn-bg
+    color: variaveis.$login-bg
+    border-radius: 1.3rem
+    font-size: 2rem
+    padding: 13px 20px
+    margin-top: auto
+    margin-bottom: 5rem
+
+    @include mobile-m 
+        margin-bottom: auto
+
+    @include mobile-p
+        margin-bottom: 2rem
+        margin-top: 2rem
+
+    &:disabled
+        background-color: variaveis.$login-bg
+        border: 3px solid variaveis.$input-color
+        color: variaveis.$input-color
+
+        &:hover
+            cursor: default
+            background-color: variaveis.$login-bg
+            border: 3px solid variaveis.$input-color
+            color: variaveis.$input-color
+
+    &:hover
+        background-color: color.adjust(variaveis.$btn-bg, $red: -25, $green: -25, $blue: -25)
+
+// NÃO CONSEGUE OU CRIAR CONTA
+.opcoes-login
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 1.5rem 
+    margin-top: auto
+
+    a
+        text-transform: uppercase
+        font-size: .7rem
+        font-weight: bold
+        color: color.adjust(variaveis.$input-color, $red: -35, $green: -35, $blue: -35)
+        transition: .1s
+        padding: .1rem
+
+        &:hover
+            color: variaveis.$fonte-color
+
+// BACKGROUND
+.background
+    background-image: url(../img/background.jpg)
+    background-size: cover
+    background-position: center
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: space-between
+
+    @include mobile-m
+        display: none
+
+    .btn
+        width: 2.5rem
+        height: 2.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 2rem
+
+        &-aviso
+            background-color: #d950e5
+            transform: rotate(45deg)
+            cursor: default
+            font-size: 2rem 
+
+            span
+                transform: rotate(-45deg)
+
+            &:hover
+                background-color: color.adjust(variaveis.$btn-aviso, $red: -35, $green: -35, $blue: -35)
+
+        &-conta
+            background-color: #ffffff17
+            color: variaveis.$hover-color
+            font-size: 1.5rem
+            padding: 1.7rem
+            border-radius: 1rem
+            box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 47%)
+
+            &:hover
+                i
+                    color: variaveis.$login-bg
+                    transition: all .3s

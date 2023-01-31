@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+* input {
+  border: none;
+  outline: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.login {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  max-width: 120px;
+  width: 100%;
+  margin: 4.5rem;
+}
+
+.login-area {
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.login-area form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.login-area form h2 {
+  font-weight: 600;
+  letter-spacing: -0.07rem;
+  margin-bottom: 0.5rem;
+}
+.login-area form .login-inputs {
+  width: 100%;
+}
+.login-area form .login-inputs-input {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.login-area form .login-inputs-input input {
+  background-color: #ededed;
+  width: 100%;
+  min-height: 3.1rem;
+  border-radius: 0.3rem;
+  padding: 0 10px;
+  padding-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  outline: none;
+}
+.login-area form .login-inputs-input input:focus {
+  outline: 3px solid #0a0a0a;
+  background-color: #f9f9f9;
+  transition: none;
+}
+.login-area form .login-inputs-input label {
+  cursor: text;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: bold;
+  position: absolute;
+  color: #919191;
+  top: 35%;
+  left: 15px;
+  transition: 0.2s;
+}
+.login-area form .login-inputs-input .ativo {
+  font-size: 0.6em;
+  top: 15%;
+  left: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  transition: 0.1s;
+}
+
+.login-form-opcoes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.login-form-opcoes .btn {
+  background: green;
+  max-width: 68px;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form-opcoes .btn-facebook {
+  background-color: #1877f2;
+}
+.login-form-opcoes .btn-facebook:hover {
+  background-color: #005ed9;
+}
+.login-form-opcoes .btn-google {
+  background-color: #ffffff;
+}
+.login-form-opcoes .btn-google:hover {
+  background-color: #e6e6e6;
+}
+.login-form-opcoes .btn-apple {
+  background-color: #000000;
+}
+.login-form-opcoes .btn-apple:hover {
+  background-color: #191919;
+}
+.login-form-opcoes .btn-xbox {
+  background-color: #107c10;
+}
+.login-form-opcoes .btn-xbox:hover {
+  background-color: #006300;
+}
+.login-form-opcoes .btn i {
+  color: #f9f9f9;
+  font-size: 1.1rem;
+}
+.login-form-opcoes .btn img {
+  width: 25%;
+}
+
+.manter-login {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.manter-login label {
+  cursor: pointer;
+}
+.manter-login input {
+  cursor: pointer;
+  appearance: none;
+  background-color: #ededed;
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+}
+.manter-login input:checked {
+  background-color: #d13639;
+}
+.manter-login input:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 7px;
+  border: 3px solid #f9f9f9;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.submit-login {
+  background-color: #d13639;
+  color: #f9f9f9;
+  border-radius: 1.3rem;
+  font-size: 2rem;
+  padding: 13px 20px;
+  margin-top: auto;
+  margin-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .submit-login {
+    margin-bottom: auto;
+  }
+}
+@media (max-width: 427px) {
+  .submit-login {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+.submit-login:disabled {
+  background-color: #f9f9f9;
+  border: 3px solid #ededed;
+  color: #ededed;
+}
+.submit-login:disabled:hover {
+  cursor: default;
+  background-color: #f9f9f9;
+  border: 3px solid #ededed;
+  color: #ededed;
+}
+.submit-login:hover {
+  background-color: #b81d20;
+}
+
+.opcoes-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-top: auto;
+}
+.opcoes-login a {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #cacaca;
+  transition: 0.1s;
+  padding: 0.1rem;
+}
+.opcoes-login a:hover {
+  color: #0a0a0a;
+}
+
+.background {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .background {
+    display: none;
+  }
+}
+.background .btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.background .btn-aviso {
+  background-color: #d950e5;
+  transform: rotate(45deg);
+  cursor: default;
+  font-size: 2rem;
+}
+.background .btn-aviso span {
+  transform: rotate(-45deg);
+}
+.background .btn-aviso:hover {
+  background-color: #b62dc2;
+}
+.background .btn-conta {
+  background-color: rgba(255, 255, 255, 0.0901960784);
+  color: #919191;
+  font-size: 1.5rem;
+  padding: 1.7rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.47);
+}
+.background .btn-conta:hover i {
+  color: #f9f9f9;
+  transition: all 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */

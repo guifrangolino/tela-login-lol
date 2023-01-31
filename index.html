@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <title>League of Legends Login</title>
+</head>
+<body>
+    <main>
+        <div class="login">
+            <img src="img/logo.png" alt="Riot Games Logo" class="logo">
+            <div class="login-area">
+                <form action="" class="login-form">
+                    <h2>Fazer login</h2>
+                    <div class="login-inputs">
+                        <div class="login-inputs-input">
+                            <input class="input-usuario" id="usuario" type="text" autocomplete="off">
+                            <label class="input-usuario-label" for="usuario">Nome de usuário</label>
+                        </div>
+                        <div class="login-inputs-input">
+                            <input class="input-usuario" type="password" id="senha">
+                            <label class="input-usuario-label" class="ativo" for="senha">Senha</label>
+                        </div>
+                    </div>
+                    <div class="login-form-opcoes">
+                        <button class="btn btn-facebook"><i class="fa-brands fa-facebook"></i></button>
+                        <button class="btn btn-google"><img src="img/google-icon.ico"></button>
+                        <button class="btn btn-apple"><i class="fa-brands fa-apple"></i></button>
+                        <button class="btn btn-xbox"><i class="fa-brands fa-xbox"></i></button>
+                    </div>
+                    <div class="manter-login">
+                        <input type="checkbox" id="manter-login">
+                        <label for="manter-login">Manter login</label>
+                    </div>
+                    <button class="btn submit-login" id="btn-login" type="submit" disabled><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="opcoes-login">
+                <a href="#">Não consegue iniciar sessão?</a>
+                <a href="#">Criar conta</a>
+            </div>
+        </div>
+        <div class="background">
+            <button class="btn btn-aviso">
+                <span style="font-weight: 900;">!</span>
+            </button>
+            <button class="btn btn-conta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
